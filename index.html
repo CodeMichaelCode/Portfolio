@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michaels Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bigshot+One" rel="stylesheet">
+</head>
+<body>
+    <header id="top">
+        <h1 class="port-name">h</h1>
+        <a href="#list"><img class="drop-arrow" src="./imgs/iconfinder_45_Arrow_Down_Turn_Line_2142690.svg" alt="down arrow" width="48px"></a> 
+    </header>
+    <nav id="list">
+        <ul class="list">
+            <li class="list-items"><a href="#top" class="list-links">Home</a></li>
+            <li class="list-items"><a href="#list" class="list-links">About Me</a></li>
+            <li class="list-items"><a href="#" class="list-links">Projects</a></li>
+            <li class="list-items"><a href="#" class="list-links">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="am-cont">
+        <div class="about-me">
+            <div class="am-section1">
+                <h1 class="am-title">About Me</h1>
+                <p class="am-bio">Hello My Name is Michael Olawunmi. I've been honing my skills for the last few months with the goal of becoming a front-end devloper. I currently work as a EMT servicing the people of NYC. I'm self taught and the struggle of learning by myself has reinforced many invaluable skills like persistence and creativity. I currently know HTML5, CSS3, Vanilla JS and Bootstrap. Google has also become my best friend on this journey. I welcome any suggestions on how to improve my portfolio and/or resume. Thank you for your time. </p>
+            </div>
+            <div class="am-section2">
+                <img src="/imgs/3001438d-0fad-43fb-9d0a-d6d4b2af8c5b_original.jpg" alt="my picture" class="port-img" width="313px">
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-cont">
+        <div class="projects-title-cont">
+            <h2 class="project-title">Projects</h2>
+        </div>
+        <div class="projects">
+            <div class="project-box">
+
+            </div>
+            <div class="project-box">
+
+            </div>
+            <div class="project-box">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-sec">
+        <div class="contact-header">
+            <h2 class="form-title">Contact Me :)</h2>
+            <a href="https://github.com/CodeMichaelCode" target="_blank" class="git-img"><img src="./imgs/iconfinder_Github_1298743.svg" alt="git logo" class="git-img" width="64px"></a>
+            <a href="#" class="indeed-img"><img src="./imgs/iconfinder_linkedin_291709.svg" alt="git logo" class="indeed-img" width="64px"></a>
+        </div>
+        <div class="form-cont"> 
+        	<form action="#" class="contact-form">
+        	    <label for="fname"></label>
+        	    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+        	    <label for="lname"></label>
+        	    <input type="text" id="lname" placeholder="Last Name: Optional">
+        	    <label for="email"></label>
+        	    <input type="text" id="email" name="email" placeholder="Email" required>
+        	    <label for="phone"></label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0=9]{4}" placeholder="Phone Number: 123-456-6789 Optional">
+                <label for="text"></label>
+                <textarea name="text" id="text" cols="100" rows="10" placeholder="Enter Text Here"></textarea>
+        	    <input class="submit" type="submit">
+        	</form>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

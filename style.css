@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* TYPOGRAPHY */
+
+.port-name {
+    font-family: 'Bigshot One', Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    text-align: center;
+    transform: translateX(10px);
+}
+
+.port-name::after {
+    content: "";
+    border:1px solid violet;
+    animation: caret infinite 0.7s step-end;
+    margin-left: 10px;  
+}
+
+.list-items {
+    list-style-type: none;
+}
+
+.list-links {
+    text-decoration: none;
+    color: black;
+    padding: 2vw 2vw;
+    transition: all 400ms ease;
+}
+
+.am-title {
+    font-size: 2em;
+    margin-left: 1.5rem;
+    color: white;
+}
+
+.am-bio {
+    width: 80%;
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    border-bottom: 2px solid rgb(158, 157, 157);
+    border-top: 2px solid rgb(158, 157, 157);
+    border-left: 2px solid rgb(158, 157, 157);
+    padding: 1.5rem;
+    color: white;
+}
+
+.project-title {
+    text-align: center;
+    padding: 3vh;
+}
+
+.form-title {
+    text-align: center;
+    padding: 3vh;
+}
+  
+/* SECTIONS */
+body {
+    overflow-x: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.5)),url(./imgs/pexels-jéshoots-234527\ \(1\).jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.list {
+    width: 80%;
+    margin: auto;
+    height: 8vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.am-cont {
+    background-color: black;
+    padding: 10vh 0 5vh;
+}
+
+.about-me {
+    width: 80vw;
+    display: flex;
+    margin: 0 auto 10vh;
+    align-items: center;  
+}
+
+.am-section1 {
+    flex: 2 ;
+}
+
+.am-section2 {
+    flex: 1;
+}
+
+.projects-cont {
+    background-color: white;
+}
+
+.project-title-cont {
+    height: 10vh;
+    overflow: hidden;
+}
+
+.projects {
+    width: 80vw;
+    margin: auto;
+}
+
+.contact-sec {
+    background:  rgb(92, 92, 92);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+}
+.form-cont {
+    padding: 1rem;
+    border: 2px solid white;
+    margin: 0 auto 5vh;
+    width: 50%;
+    min-width: 375px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+.contact-form input {
+    height: 3vh;   
+}
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form .submit {
+    width: 50%;
+    align-self: center;
+
+    border-radius: 32px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* IMAGES */
+.drop-arrow {
+    position: absolute;
+    bottom: 5vh;
+    animation: arrow infinite 1.5s ease-out both;
+}
+
+.port-img {
+    margin: 4vw 2vw 0 2vw;
+    box-shadow: -15px -15px 0 0 white;
+    transform: translateY(-15px);
+    width: 85%;
+    width: 300px;
+}
+
+.git-img,
+.indeed-img {
+    width: 72px;
+    margin: 10px;
+}
+
+/* animations, focus and hover */
+@keyframes arrow {
+    from {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    25% {
+        transform: scale(.87);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: scale(.77);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: scale(.85);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: scale(.94);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes caret {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+.list-links:hover,
+.list-links:focus {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    outline: none;
+}
+
+/* MEDIA QUERIES */

@@ -1,4 +1,4 @@
-const texts = ["Hi, I'm Michael And This Is My Dev Portfolio."]
+const texts = ["Hi, I'm Michael."]
 let count = 0;
 let index = 0;
 let currentText = "";

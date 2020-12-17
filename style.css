@@ -21,7 +21,7 @@
     content: "";
     border:1px solid violet;
     animation: caret infinite 0.7s step-end;
-    margin-left: 10px;  
+    margin-left: 0px;  
 }
 
 .list-items {
@@ -36,9 +36,10 @@
 }
 
 .am-title {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-left: 1.5rem;
-    color: white;
+    color: black;
+    margin-bottom: 3rem;
 }
 
 .am-bio {
@@ -46,16 +47,22 @@
     margin-top: 1rem;
     line-height: 1.6;
     font-weight: 300;
-    border-bottom: 2px solid rgb(158, 157, 157);
-    border-top: 2px solid rgb(158, 157, 157);
-    border-left: 2px solid rgb(158, 157, 157);
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
     padding: 1.5rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .project-title {
     text-align: center;
-    padding: 3vh;
+    padding: 1rem 0;
+}
+
+.project-header{
+    padding-top: 1rem;
+    text-align: center;
+
 }
 
 .form-title {
@@ -71,7 +78,7 @@ body {
 header{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.5)),url(./imgs/pexels-jéshoots-234527\ \(1\).jpg);
+    background: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.1)),url(./imgs/pexels-negative-space-34579.jpg);
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -84,7 +91,7 @@ header{
 }
 
 .list {
-    width: 80%;
+    width: 90%;
     margin: auto;
     height: 8vh;
     background-color: white;
@@ -96,19 +103,27 @@ header{
 }
 
 .am-cont {
-    background-color: black;
-    padding: 10vh 0 5vh;
+    background-color: #dbdbdb;
+    /* padding: 5vh 0 5vh; */
 }
 
 .about-me {
-    width: 80vw;
+    width: 90%;
     display: flex;
-    margin: 0 auto 10vh;
+    margin: 0 auto;
     align-items: center;  
+    justify-content: center;
+    border-bottom: solid white 3px;
+    padding: 5vw;
 }
 
 .am-section1 {
     flex: 2 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    order: 2;
 }
 
 .am-section2 {
@@ -116,13 +131,13 @@ header{
 }
 
 .projects-cont {
-    background-color: white;
+    background:#dbdbdb ;
+
 }
 
-.project-title-cont {
-    height: 10vh;
-    overflow: hidden;
-}
+/* .project-title-cont {
+
+} */
 
 .projects {
     width: 80vw;
@@ -130,12 +145,12 @@ header{
 }
 
 .contact-sec {
-    background:  rgb(92, 92, 92);
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #dbdbdb;
 }
 
 .contact-form {
@@ -143,6 +158,9 @@ header{
     flex-direction: column;
     width: 95%;
     margin: auto;
+    /* background:  rgb(92, 92, 92); */
+    /* border: 5px solid rgb(92, 92, 92); */
+    padding: 20px;
 }
 .form-cont {
     padding: 1rem;
@@ -169,17 +187,46 @@ header{
 .contact-form .submit {
     width: 50%;
     align-self: center;
-
     border-radius: 32px;
     outline: none;
     cursor: pointer;
 }
 
+.projectsCont{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+
+}
+
+.project-box{
+    width: 30%;
+    margin: 15px;
+}
+
+.projects-outer-cont{
+    padding: 0 0 5vw 0;
+    border-bottom: solid white 3px;
+    width: 90%;
+    margin: auto;
+}
+
 /* IMAGES */
 .drop-arrow {
-    position: absolute;
-    bottom: 5vh;
+    align-self: flex-end;
     animation: arrow infinite 1.5s ease-out both;
+    margin: auto;
+}
+
+.arrow-div{
+width: 100%;
+text-align: center;
+position: absolute;
+bottom: 5vh;
 }
 
 .port-img {
@@ -195,6 +242,14 @@ header{
     width: 72px;
     margin: 10px;
 }
+
+.project-box img{
+    width: 100%;
+    margin: 1rem auto;
+    border: black 2px solid;
+
+}
+
 
 /* animations, focus and hover */
 @keyframes arrow {
@@ -233,9 +288,75 @@ header{
 }
 .list-links:hover,
 .list-links:focus {
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(114, 114, 114);
     color: white;
     outline: none;
 }
 
 /* MEDIA QUERIES */
+
+@media only screen and (max-width: 930px){
+    .about-me{
+        flex-direction: column;
+    }
+
+    .port-img{
+        margin-top: 5vh;
+        width: 70%;
+        justify-self: center;
+        max-width: 300px;
+    }
+
+    .am-bio{
+        margin: 0;
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .am-title{
+        margin: 0 auto 15px auto;
+        text-align: center;
+    }
+
+    .list{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .list-links{
+        padding: 50px 10px;
+    }
+
+    .am-section1{
+        order: 2;
+    }
+
+    .am-section2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .projectsCont{
+        flex-direction: column;
+    }
+    
+    .project-box{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .form-cont{
+        min-width: 300px;
+    }
+
+}
+
+@media only screen and (max-width:400px){
+    .list-links{
+        font-size: 14px;
+    }
+}
+
+
